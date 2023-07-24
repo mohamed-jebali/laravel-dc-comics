@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 class ComicsController extends Controller
 {
     public function index(){
-        return view('index');
+        $listComics = Comic::all();
+        return view('index',compact('listComics'));
     }
 }
