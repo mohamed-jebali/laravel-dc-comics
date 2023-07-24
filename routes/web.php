@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\ComicsController as GuestComicsController;
+use App\Http\Controllers\Admin\ComicsController as AdminComicsController;
+use App\Models\Comic;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +17,4 @@ use App\Http\Controllers\Guest\ComicsController as GuestComicsController;
 */
 
 Route::get('/',[GuestComicsController::class,'index'])->name('index');
+Route::get('/admin/{id}',[AdminComicsController::class,'show'])->name('admin.show');

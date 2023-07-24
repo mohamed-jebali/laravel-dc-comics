@@ -16,17 +16,6 @@
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC-LOGO">
             </div>
             <ul class='d-flex align-items-center'>
-            @foreach($headerList as $elementList)
-                    <li class="{{ ($elementList['active']) ? 'active' : '' }}">
-                        <a href="#">
-                            {{$elementList['text']}}
-                        </a>
-                    </li>
-                    @endforeach
-                    <div class='search-bar ms-5'>
-                        Search
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
                 </ul>
         </header>
     </div>
