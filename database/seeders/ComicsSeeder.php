@@ -229,14 +229,14 @@ class ComicsSeeder extends Seeder
             ],
         ];
         foreach ($listComics as $comicData) {
-            $comic = new Comic();
-            $comic->title['title'];
+            $comic = new Comic;
+            $comic->title = $comicData['title'];
+            $comic->thumb = $comicData['thumb'];
             $comic->description = $comicData['description'];
             $comic->price = $comicData['price'];
+            $comic->series = $comicData['series'];
             $comic->sale_date = $comicData['sale_date'];
             $comic->type = $comicData['type'];
-            $comic->artist = $comicData['artist'];
-            $comic->writers = $comicData['writers'];
             $comic->save();
         }
     }
