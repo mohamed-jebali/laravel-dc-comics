@@ -7,9 +7,9 @@
                 @foreach($listComics as $comic)
                      <div class="container-card">
                         <img src="{{ $comic['thumb'] }}" alt="images-comics">
-                              <p>
-                             {{ strtoupper($comic['series'])}}
-                              </p>
+                        <p>
+                             <a class="text-decoration-none text-white" href="{{route('admin.show', $comic->id)}}">{{ strtoupper($comic['series'])}}</a>
+                         </p>
                     </div>         
                 @endforeach              
                 <button>

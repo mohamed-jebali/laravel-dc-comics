@@ -21,7 +21,8 @@
         @yield('main-content')
     </main>
 
-    @include('partials.footer')
+    @include('partials.footer_top')
+    @include('partials.footer_bottom')
     @yield('custom-scripts-tail')
 </body>
 </html>

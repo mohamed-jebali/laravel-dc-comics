@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class ComicsController extends Controller
 {
@@ -14,7 +15,8 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+        $listComics = Comic::paginate(12);
+        return view('admin.index',compact('listComics'));
     }
 
     /**
@@ -46,8 +48,8 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        $listComics = Comic::paginate(10);
-        return view('admin.show',compact('listComics'));
+        $comic = Comic::findOrFail($id);
+        return view('admin.show',compact('comic'));
     }
 
     /**

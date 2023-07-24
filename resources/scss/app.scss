@@ -95,7 +95,7 @@ header{
     .current-series{
         position: relative;
         bottom: 45px;
-        font-size: 1.1rem;
+        font-size: 0.85rem;
     }
 
     div.container-card{
@@ -146,6 +146,100 @@ div.content-container{
             .power-visa{
                 height: 25%;
 
+            }
+        }
+    }
+}
+
+.container-footer-top{
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-top{
+    h2{
+        color: white;
+        margin-bottom: 1.5rem;
+    }
+    
+    .brand{
+        position: relative;
+        left: 54px;
+        z-index: 1;
+        background-image: url(http://[::1]:5173/resources/img/dc-logo-bg.png);
+        background-size: 524px;
+        background-position: 0px;
+        height: 502px;
+        width: 66%;
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+    footer{
+        max-width: 1000px;
+        @include flex(row,space-between);
+    }
+    
+    ul{
+        li{
+            @include flex(column,center,start);
+            color : $DcFooterColorFont;
+            margin-right: 1rem;
+            font-size: 0.6rem;
+            margin-bottom: 0.5rem;
+    
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.list-wrapper{
+    padding-top: 3rem;
+}
+.list-footer{
+    margin-right: 2rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+
+
+body{
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+
+.footer-bottom-bg{
+    background-color: $DcFooterBg;
+}
+
+.footer-wrapper-bottom{
+    padding: 2rem 0rem;
+    max-width: 1000px;
+    color: white;
+    @include flex(row,space-between,center);
+    
+    button{
+        padding: 0.9rem;
+        background-color: $DcFooterBg;
+        color: white;
+        border: 2px solid $DcColorBlue;
+    }
+
+    .social-container{
+        @include flex(row,space-between,center);
+    
+        h2{
+            color: $DcColorBlue;
+            margin-right: 2rem;
+        }
+        .socials{
+            @include flex(row,space-between,center);
+
+            img{
+                margin-right: 1rem;
             }
         }
     }

@@ -17,4 +17,7 @@ use App\Models\Comic;
 */
 
 Route::get('/',[GuestComicsController::class,'index'])->name('index');
+
+
+Route::get('admin/index', [AdminComicsController::class, 'index'])->name('index');
 Route::get('/admin/{id}',[AdminComicsController::class,'show'])->name('admin.show');
