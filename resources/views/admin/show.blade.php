@@ -18,6 +18,8 @@
                   <p class="card-text"> <strong>Series: </strong>{{$comic->series}}</p>
                   <p class="card-text"> <strong>Type: </strong>{{$comic->type}}</p>
                   <p class="card-text"> <strong>Sale Date: </strong>{{$comic->sale_date}}</p>
+                  <p class="card-text"> <strong>Artists: </strong>{{$comic->artists}}</p>
+                  <p class="card-text"> <strong>Writers: </strong>{{$comic->writers}}</p>
                 </div>
               </div>
           </div>

@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('guest.index')}}">
+                        <a href="{{ route ('admin.index')}}">
                             COMICS
                         </a>
                     </li>

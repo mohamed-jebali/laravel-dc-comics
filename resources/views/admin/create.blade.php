@@ -39,6 +39,14 @@
     <label for="type" class="form-label">Type</label>
     <input type="text" class="form-control" id="type" name='type'>
   </div>
+  <div class="mb-3">
+    <label for="artists" class="form-label">Artists</label>
+    <input type="text" class="form-control" id="artists" name='artists'>
+  </div>
+  <div class="mb-3">
+    <label for="writers" class="form-label">Writers</label>
+    <input type="text" class="form-control" id="writers" name='writers'>
+  </div>
   <button type="submit" class="btn btn-primary">Generate New Comic</button>
   <button type="reset" class="btn btn-warning">Reset</button>
 </form>

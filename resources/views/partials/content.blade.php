@@ -18,7 +18,6 @@
                     <a class='text-white text-decoration-none' href="{{route('admin.create')}}">LOAD MORE</a>
                 </button>
             </div>
-            {!! $listComics->links() !!}
             </div>
         </div>
     </div>

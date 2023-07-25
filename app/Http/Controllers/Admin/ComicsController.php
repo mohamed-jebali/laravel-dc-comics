@@ -19,6 +19,7 @@ class ComicsController extends Controller
         return view('admin.index',compact('listComics'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
