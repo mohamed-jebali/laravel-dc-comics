@@ -17,7 +17,11 @@ use App\Models\Comic;
 */
 
 Route::get('/',[GuestComicsController::class,'index'])->name('index');
+Route::get('/admin/show/{id}',[AdminComicsController::class,'show'])->name('admin.show');
 
 
 Route::get('admin/index', [AdminComicsController::class, 'index'])->name('guest.index');
-Route::get('/admin/{id}',[AdminComicsController::class,'show'])->name('admin.show');
+Route::get('/admin/create',[AdminComicsController::class,'create'])->name('admin.create');
+Route::post('/admin/store',[AdminComicsController::class,'store'])->name('admin.store');
+Route::get('/admin/show/{id}',[AdminComicsController::class,'show'])->name('admin.show');
+
