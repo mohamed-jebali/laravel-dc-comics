@@ -10,6 +10,6 @@ class ComicsController extends Controller
 {
     public function index(){
         $listComics = Comic::all();
-        return view('index',compact('listComics'));
+        return view('guest.index',compact('listComics'));
     }
 }
