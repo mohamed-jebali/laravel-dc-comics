@@ -33,7 +33,7 @@
   </div>
   <div class="mb-3">
     <label for="sale_date" class="form-label">Sale Date</label>
-    <input type="text" class="form-control" id="sale_date" name='sale_date'>
+    <input type="date" class="form-control" id="sale_date" name='sale_date'>
   </div>
   <div class="mb-3">
     <label for="type" class="form-label">Type</label>

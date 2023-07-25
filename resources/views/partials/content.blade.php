@@ -13,7 +13,7 @@
                     </div>         
                 @endforeach              
                 <button>
-                    LOAD MORE
+                    <a class='text-white text-decoration-none' href="{{route('admin.create')}}">LOAD MORE</a>
                 </button>
             </div>
             </div>
