@@ -29,7 +29,7 @@
                   <button class='col-2 mx-auto btn btn-primary'>
                     <a class='text-white text-decoration-none' href="{{route('admin.edit', $comic->id)}}">EDIT</a>
                   </button>
-                  <form class='d-inline' action="{{ route ('admin.destroy', $comic->id) }}" method='POST'>
+                  <form class='d-inline delete-button' action="{{ route ('admin.destroy', $comic->id) }}" method='POST'>
                       @csrf
                       @method('DELETE')
                       <button type="submit" class="btn btn-warning">Delete Comic</button>
@@ -40,4 +40,21 @@
       </div>
   </div>
 </div>
+@endsection
+
+
+@section('custom-scripts-tail')
+<script>
+  const deleteButtons = document.querySelectorAll('.delete-button');
+
+  deleteButtons.forEach(element => {
+    element.addEventListener('submit', function (event){
+      event.preventDefault();
+      const popUpWindow = window.confirm('Are you sure you want to delete this Comic?');
+      if (popUpWindow){
+        this.submit();
+      }
+    });
+  });
+</script>
 @endsection
