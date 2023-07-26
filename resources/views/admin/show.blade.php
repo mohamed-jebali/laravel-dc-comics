@@ -20,6 +20,14 @@
                   <p class="card-text"> <strong>Sale Date: </strong>{{$comic->sale_date}}</p>
                   <p class="card-text"> <strong>Artists: </strong>{{$comic->artists}}</p>
                   <p class="card-text"> <strong>Writers: </strong>{{$comic->writers}}</p>
+                  <button class='col-2 mx-auto btn btn-primary'>
+                    <a class='text-white text-decoration-none' href="{{route('admin.edit', $comic->id)}}">EDIT</a>
+                  </button>
+                  <form class='d-inline' action="{{ route ('admin.destroy', $comic->id) }}" method='POST'>
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-warning">Delete Comic</button>
+                  </form>
                 </div>
               </div>
           </div>
