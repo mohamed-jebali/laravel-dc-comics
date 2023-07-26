@@ -7,8 +7,14 @@
 <div class="wrapper bg-dark">
   <div class="container">
       <div class="row">
+      @if(session('updated'))
+        <div class="col-12 mx-auto">
+                <div class="alert alert-primary mt-3" role="alert">
+                     {{session('updated')}} has been updated
+                </div>
+        </div>
+      @endif
       <h1 class="text-center text-white mt-5"> <strong>{{$comic->title}}</strong></h1>
-          <div class="col-8 mx-auto">
               <div class="card my-5">
                 <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
                 <div class="card-body">

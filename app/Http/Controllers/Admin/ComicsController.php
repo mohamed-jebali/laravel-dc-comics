@@ -42,7 +42,7 @@ class ComicsController extends Controller
         $comic = new Comic();
         $comic->fill($data);
         $comic->save();
-        return redirect()->route('admin.show', $comic->id);
+        return redirect()->route('admin.show', $comic->id)->with('created', $comic->name);
     }
 
     /**
@@ -84,7 +84,7 @@ class ComicsController extends Controller
 
         $comic->update($data);
 
-        return redirect()->route('admin.show', $comic->id);
+        return redirect()->route('admin.show', $comic->id)->with('updated', $comic->name);
     }
 
     /**
